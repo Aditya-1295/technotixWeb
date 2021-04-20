@@ -1,0 +1,21 @@
+<%- include('partials/header'); -%>
+
+<div class="form">
+  <form class="" action="/admin/addEventDetails" method="post">
+    <label for="name">Event Name :</label>
+    <input type="text" name="name" value="" placeholder="name" required><br>
+    <label for="date">Date :</label>
+    <input type="date" name="date" value="" placeholder="date" required><br>
+    <label for="description">Description</label><br>
+    <textarea name="description" rows="6" cols="40" required></textarea><br>
+    <input type="text" name="id" readonly value="<%=id %>"><br>
+    <button type="submit" class="btn btn-primary up" name="button">Upload</button>
+  </form>
+
+</div>
+
+
+
+
+
+<%- include('partials/footer'); -%>

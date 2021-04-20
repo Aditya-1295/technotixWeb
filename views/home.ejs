@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="/images/pp.png"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.css">
+    <!-- Font awesome -->
+
+        <title>Technotix</title>
+  </head>
+
+  <body>
+
+    <section id="title">
+      <div class="container-fluid">
+
+        <!-- Nav Bar -->
+
+        
+
+        <div class="row">
+        <div class="col-lg-6 col-md-12 col-sm-12 typewriter">
+          <h1 class="heading">Welcome to Bennett's Robotics Club </h1>
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+          <img src="images/clubLogo.jfif" alt="Technotix logo" class="title-img">
+        </div>
+      </div>
+
+    </div>
+
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="container-fluid tit">
+        <div>
+          <h3>About</h3>
+          <div class="about-row">
+            <img class="robot-img" src="\images\robot.png" alt="robot image technotix club">
+            <p>Technotix is a student-led club that works towards developing a community of excited learners in the field of Robotics-related technology. Our club is inter disciplinary and its incorporated by members from all fields of Engineering. We are looking for members who share high interest and undeterred commitment to Robotics as us and are willing to build this community further.
+The Club provides a place where all students, especially those with an inclination for technology, can thrive.
+
+The club caters to the interests of hobbyists and beginners in robotics and extends support for participation in robotics-related competitions that are held all over the country.
+
+The club's intent is to inspire young minds to be the driving force in the field of robotics, by engaging them in exciting, mentor-based programs that build engineering skills, inspire innovation, and foster well-rounded life capabilities including self-confidence, communication and leadership.</p>
+          </div>
+
+        </div>
+      </div>
+      <hr>
+      <br>
+    </section>
+
+    <section id="event" class="events">
+      <div class="container-fluid tit">
+        <div>
+          <h3>Events</h3>
+        </div>
+
+        <section class="pt-5 pb-5">
+<div class="container">
+  <div class="row">
+      <div class="col-6">
+          <!-- <h3 class="mb-3 tit"> Our Team </h3> -->
+      </div>
+      <div class="col-6 text-right">
+          <a class="btn btn-primary mb-3 mr-1" href="#carouselExampleIndicators2" role="button" data-slide="prev">
+              <i class="fa fa-arrow-left"></i>
+          </a>
+          <a class="btn btn-primary mb-3 " href="#carouselExampleIndicators2" role="button" data-slide="next">
+              <i class="fa fa-arrow-right"></i>
+          </a>
+      </div>
+      <div class="col-12">
+          <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+
+              <div class="carousel-inner">
+                  <div class="carousel-item active">
+                      <div class="row">
+
+                        <% for(var i = 1;i<=events.length;i++){ %>
+
+                          <% if (i%3 === 0){ %>
+                            <div class="col-md-4 mb-3">
+                                <div class="card">
+                                    <img class="img-fluid" alt="100%x280" src="/image/<%= events[i-1].image %> ">
+                                    <div class="card-body">
+                                        <h4 class="card-title"> <%= events[i-1].eventName %> </h4>
+                                    </div>
+
+                                    <div class="card-footer">
+                                      <small class="text-muted"><a href="/specificEvent/<%= events[i-1].eventName %>">Details</a></small>
+                                    </div>
+
+                                </div>
+                            </div></div></div>
+                          <%  if (i !== events.length){ %>
+                              <div class="carousel-item">
+                                  <div class="row">
+                            <% } %>
+
+                          <% }else{ %>
+                            <div class="col-md-4 mb-3">
+                                <div class="card">
+                                    <img class="img-fluid" alt="100%x280" src="/image/<%= events[i-1].image %> ">
+                                    <div class="card-body">
+                                        <h4 class="card-title"> <%=  events[i-1].eventName %> </h4>
+
+
+                                    </div>
+                                    <div class="card-footer">
+                                      <small class="text-muted"><a href="/specificEvent/<%= events[i-1].eventName %>">Details</a></small>
+                                    </div>
+
+                                </div>
+                            </div>
+                          <% } %>
+
+
+                        <% } %>
+
+
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+</section>
+
+
+
+      </div>
+
+
+      <hr>
+      <br>
+    </section>
+
+
+    <section id="project"class="projects">
+
+      <div class="container-fluid tit">
+        <div>
+          <h3>Projects</h3>
+        </div>
+
+        <section class="pt-5 pb-5">
+<div class="container">
+  <div class="row">
+      <div class="col-6">
+          <!-- <h3 class="mb-3 tit"> Our Team </h3> -->
+      </div>
+      <div class="col-6 text-right">
+          <a class="btn btn-primary mb-3 mr-1" href="#carouselExampleIndicators3" role="button" data-slide="prev">
+              <i class="fa fa-arrow-left"></i>
+          </a>
+          <a class="btn btn-primary mb-3 " href="#carouselExampleIndicators3" role="button" data-slide="next">
+              <i class="fa fa-arrow-right"></i>
+          </a>
+      </div>
+      <div class="col-12">
+          <div id="carouselExampleIndicators3" class="carousel slide" data-ride="carousel">
+
+              <div class="carousel-inner">
+                  <div class="carousel-item active">
+                      <div class="row">
+
+                        <% for(var i = 1;i<=projects.length;i++){ %>
+
+                          <% if (i%3 === 0){ %>
+                            <div class="col-md-4 mb-3">
+                                <div class="card">
+                                    <img class="img-fluid" alt="100%x280" src="/image/<%= projects[i-1].image %> ">
+                                    <div class="card-body">
+                                        <h4 class="card-title"> <%= projects[i-1].projectName %> </h4>
+                                    </div>
+
+                                    <div class="card-footer">
+                                      <small class="text-muted"><a href="/specificProject/<%= projects[i-1].projectName %>">Details</a></small>
+                                    </div>
+
+                                </div>
+                            </div></div></div>
+                          <%  if (i !== projects.length){ %>
+                              <div class="carousel-item">
+                                  <div class="row">
+                            <% } %>
+
+                          <% }else{ %>
+                            <div class="col-md-4 mb-3">
+                                <div class="card">
+                                    <img class="img-fluid" alt="100%x280" src="/image/<%= projects[i-1].image %> ">
+                                    <div class="card-body">
+                                        <h4 class="card-title"> <%= projects[i-1].projectName %> </h4>
+
+
+                                    </div>
+                                    <div class="card-footer">
+                                      <small class="text-muted"><a href="/specificProject/<%= projects[i-1].projectName %>">Details</a></small>
+                                    </div>
+
+                                </div>
+                            </div>
+                          <% } %>
+
+
+                        <% } %>
+
+
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+</section>
+
+
+
+      </div>
+
+    </section>
+
+    <br>
+    <hr>
+
+
+    <section id="team" class="team">
+      <div class="container-fluid tit">
+        <div>
+          <h3>Our Team</h3>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-sm-12 product">
+              <i class="fas fa-poll-h fa-3x" aria-hidden="true"></i><br><br>
+              <a href="/team/Marketing"><button type="submit" class="btn btn-outline-dark btn-lg pro">Marketing Team</button></a>
+          </div>
+
+          <div class="col-lg-4 col-md-4 col-sm-12 product">
+            <i class="fas fa-robot fa-3x" aria-hidden="true"></i><br><br>
+              <a href="/team/Technical"><button type="submit" class="btn btn-outline-dark btn-lg pro">Technical Team</button></a>
+          </div>
+
+          <div class="col-lg-4 col-md-4 col-sm-12 product">
+            <i class="far fa-address-card fa-3x" aria-hidden="true"></i><br><br>
+              <a href="/team/Outreach"><button type="submit" class="btn btn-outline-dark btn-lg pro">Outreach Team</button></a>
+          </div>
+
+          <div class="col-lg-4 col-md-4 col-sm-12 product">
+              <i class="fas fa-user-friends fa-3x" aria-hidden="true"></i><br><br>
+              <a href="/team/Executive"><button type="submit" class="btn btn-outline-dark btn-lg pro">Executive Team</button></a>
+          </div>
+
+          <div class="col-lg-4 col-md-4 col-sm-12 product">
+            <i class="fas fa-binoculars fa-3x" aria-hidden="true"></i><br><br>
+              <a href="/team/Vigilance"><button type="submit" class="btn btn-outline-dark btn-lg pro">Viglance Team</button></a>
+          </div>
+
+          <div class="col-lg-4 col-md-4 col-sm-12 product">
+            <i class="far fa-gem fa-3x" aria-hidden="true"></i><br><br>
+              <a href="/team/Treasury"><button type="submit" class="btn btn-outline-dark btn-lg pro">Treasury</button></a>
+          </div>
+        </div>
+
+      </div>
+
+      <br>
+      <hr>
+      <br><br>
+
+
+
+
+    <section id="contact" class="contact tit">
+
+
+<div class="container">
+  <h3 class="tit">Contact</h3>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="well well-sm">
+                <form action="/" method="post">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="cname">
+                                Name</label>
+                            <input type="text" name="cname" class="form-control" id="name" placeholder="Enter name" required="required" />
+                        </div>
+                        <div class="form-group">
+                            <label for="cemail">
+                                Email Address</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
+                                </span>
+                                <input type="email" name="cemail" class="form-control" id="email" placeholder="Enter email" required="required" /></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="csubject">
+                                Subject</label>
+                            <select id="subject" name="csubject" class="form-control" required="required">
+                                <option value="na" selected="">Choose One:</option>
+                                <option value="collabration">Collabrate with technotix</option>
+                                <option value="suggestions">Suggestions</option>
+                                <option value="product">Genral query</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="cmessage">
+                                Message</label>
+                            <textarea name="cmessage" id="message" class="form-control" rows="9" cols="25" required="required"
+                                placeholder="Message"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-primary btn-outline-dark" id="btnContactUs">
+                            Send Message</button>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br>
+<br>
+
+    </section>
+
+
+
+
+
+    <footer class="footer-distributed foo">
+
+    			<div class="footer-left">
+
+    				<h3>Technotix<span>BU</span></h3>
+
+    				<p class="footer-links" style="text-align:center">
+    					<a href="#about" class="link-1">About</a>
+
+    					<a href="#event">Events</a>
+
+    					<a href="#project">Project</a>
+
+    					<a href="#contact">Contact</a>
+
+    					<a href="/login">Login</a>
+    				</p>
+
+    			</div>
+
+    			<div class="footer-center">
+
+    				<div>
+    					<i class="fa fa-map-marker"></i>
+    					<p style="text-align:center">Plot Nos 8-11, TechZone 2, Greater Noida Uttar Pradesh</p>
+    				</div>
+
+    				<div>
+    					<i class="fa fa-mobile"></i>
+    					<p>1800-103-8484</p>
+    				</div>
+
+    				<div>
+    					<i class="fa fa-envelope"></i>
+    					<p><a href="#contact">robotics@bennett.edu.in</a></p>
+    				</div>
+
+    			</div>
+
+    			<div class="footer-right">
+
+    				<p class="footer-company-about">
+    					<span>About the Page</span>
+    					This is the offcial website to robotics club of Bennett
+              University.
+    				</p>
+
+    				<div class="footer-icons">
+
+    					<a href="https://www.instagram.com/technotix_bennett/"><i class="fa fa-instagram"></i></a>
+    					<a href="https://www.instagram.com/technotix_bennett/"><i class="fa fa-linkedin"></i></a>
+    					<a href="https://github.com/Technotix-BU"><i class="fa fa-github"></i></a>
+
+    				</div>
+
+    			</div>
+
+    		</footer>
+
+
+          <div class="foot">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                  <h5>Copyright © 2021 Robotics Club, Bennett University Noida</h5>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                  <a href="https://www.bennett.edu.in/"><img src="https://www.bennett.edu.in/wp-content/themes/twentysixteen/images/bennett-logo.png" alt="Bennett University"></a>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                  <h5>Designed & Developed | Aditya Kumar Gupta</h5>
+                </div>
+
+              </div>
+
+          </div>
+        </div>
+        </section>
+
+
+
+
+
+
+
+  <script src="https://kit.fontawesome.com/14c951c111.js" crossorigin="anonymous"></script>
+  <!-- javascript -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Ubuntu&display=swap" rel="stylesheet">
+  <script type="text/javascript">
+
+
+
+      $(document).ready(function(){
+        $(function(){
+          $(".navbar a").on('click' , function(){
+            $("html, body").animate({
+              scrollTop: $($.attr(this, 'herf')).offset().top
+            }, 'slow');
+          });
+        });
+      });
+
+
+
+
+  </script>
+
+
+
+
+
+
+
+
+  </body>
+</html>

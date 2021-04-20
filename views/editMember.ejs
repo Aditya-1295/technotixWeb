@@ -1,0 +1,51 @@
+<%- include('partials/header'); -%>
+
+
+
+
+
+<div class="container-fluid mt-4">
+    <div class="row justify-content-center">
+
+
+
+        <% members.forEach(function(item){ %>
+
+          <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class="card boder-dark" style="width: 18rem;">
+                <img class="card-img-top" src="/image/<%= item.image %>" alt="Card image cap">
+                  <div class="card-body">
+                      <h5 class="card-title"> <%= item.memberName %> </h5>
+
+                      <p class="card-text"><%= item.year %> </p>
+                  </div>
+                  <div class="card-footer">
+                    <form action="/admin/editMember" method="post">
+                      <small class="text-muted"><button type="submit" name="delete" value="<%= item._id %>">Delete</button></small>
+                    </form>
+                  </div>
+              </div>
+          </div>
+
+        <% }) %>
+
+
+
+
+
+    </div>
+</div>
+
+
+
+<script src="https://kit.fontawesome.com/14c951c111.js" crossorigin="anonymous"></script>
+<!-- javascript -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Ubuntu&display=swap" rel="stylesheet">
+<script src="/app.js" charset="utf-8"></script>
+
+
+  </body>
+</html>

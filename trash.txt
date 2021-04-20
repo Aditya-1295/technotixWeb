@@ -1,0 +1,139 @@
+// const event1 = new Event({
+//   eventName: "Arduino Workshop",
+//   eventDate: "12 th November",
+//   eventDescription: "This is a arduino work shop conducted by Technotix bu"
+// });
+//
+// event1.save(function(err){
+//   if (err){
+//     console.log("error");
+//   }
+// });
+
+
+<% events.forEach(function(event){ %>
+
+  <div class="col-lg-4 col-md-6 col-sm-12">
+      <div class="card boder-dark" style="width: 18rem;">
+        <img class="card-img-top" src="/image/<%= event.image %>" alt="Card image cap">
+          <div class="card-body">
+              <h5 class="card-title"> <%= event.name %> </h5>
+
+              <p class="card-text"><%= event.description %> </p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted"><a href="/addEvent">Details</a></small>
+          </div>
+      </div>
+  </div>
+
+<% }) %>
+
+
+
+/image/<%= event.image %>
+
+
+for (var i =1;i<members.legth+1;i++){
+  if (i%3 ===0){
+
+  }else{
+
+  }
+
+
+}
+
+
+
+
+
+<!-- <h3><%= event.eventName %></h3>
+<div class="row">
+  <div class="specific-event">
+    <div class="col-sm-12 col-md-6 col-lg-6">
+      <img id="imgg" src="\image\<%= event.image %>">
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-6">
+      <p><%= event.eventDescription %></p>
+    </div>
+  </div>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+<% members.forEach(function(member){ %>
+
+  <div class="col-md-4 mb-3">
+      <div class="card">
+          <img class="img-fluid" alt="100%x280" src="/images/TechnotixBG.jpeg">
+          <div class="card-body">
+              <h4 class="card-title"> <%= member.memberName %> </h4>
+              <p class="card-text"> <%= member.memberPost %> | <%= member.memberCommittee %> </p>
+
+          </div>
+
+      </div>
+  </div>
+
+<% }) %>
+
+
+
+
+
+
+
+
+
+<div class="container-fluid mt-4">
+  <div class="row">
+
+    <% projects.forEach(function(project){ %>
+
+      <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="card boder-dark">
+            <img class="card-img-top" src="/image/<%= project.image %> " alt="Card image cap">
+              <div class="card-body">
+                  <h5 class="card-title"> <%= project.projectName %> </h5>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted"><a href="/specificProject/<%= project.projectName %>">Details</a></small>
+              </div>
+          </div>
+      </div>
+
+    <% }) %>
+
+
+
+
+
+  </div>
+</div>
+
+
+
+
+<% events.forEach(function(event){ %>
+
+  <div class="col-lg-4 col-md-6 col-sm-12">
+      <div class="card boder-dark">
+        <img class="card-img-top" src="/image/<%= event.image %> " alt="Card image cap">
+          <div class="card-body">
+              <h5 class="card-title"> <%= event.eventName %> </h5>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted"><a href="/specificEvent/<%= event.eventName %>">Details</a></small>
+          </div>
+      </div>
+  </div>
+
+<% }) %>

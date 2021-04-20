@@ -1,0 +1,30 @@
+<%- include('partials/header'); -%>
+
+<div class="form">
+  <form class="" action="/admin/addMemberDetails" method="post">
+    <label for="name">Full Name :</label>
+    <input type="text" name="name" value="" placeholder="name" required><br>
+    <label for="date">Year of study :</label>
+    <input type="text" name="year" value="" placeholder="" required><br>
+    <label for="post">Post :</label>
+    <input name="post" required></input><br>
+    <label for="committee">Committee :</label>
+    <select name="committee" id="cars">
+      <option value="Technical">Technical</option>
+      <option value="Marketing">Marketing</option>
+      <option value="Outreach">Outreach</option>
+      <option value="Executive">Executive</option>
+      <option value="Vigilance">Vigilance</option>
+      <option value="Treasury">Treasury</option>
+    </select>
+    <input type="text" name="id" readonly value="<%=id %>"><br>
+    <button type="submit" class="btn btn-primary up" name="button">Upload</button>
+  </form>
+
+</div>
+
+
+
+
+
+<%- include('partials/footer'); -%>

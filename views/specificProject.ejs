@@ -1,0 +1,28 @@
+<%- include('partials/header'); -%>
+
+<div class="container-fluid">
+  <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+              <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                  <h3><%= project.projectName %></h3>
+                  <h6> <%= project.projectDescription %> </h6>
+
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                  <img src="\image\<%= project.image %>" style="max-width:100%; max-height: 100%;" >
+                </div>
+              </div>
+            </div>
+          </div>
+
+</div>
+
+
+<br>
+
+<hr>
+
+<br>
+
+<%- include('partials/footer'); -%>
