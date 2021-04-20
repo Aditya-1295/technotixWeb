@@ -1,29 +1,6 @@
 body{
   font-family: 'Montserrat';
   margin: 0;
-  padding: 0;
-  height: 100%;
-}
-
-@media (max-width: 1000px) {
-
-      h1{
-        font-size: 2.8rem;
-      }
-
-      h5{
-        font-size: 1.2rem
-      }
-
-      p{
-        line-height: 1.5;
-      }
-
-      .logo{
-        font-size: 1.5rem;
-      }
-
-
 }
 
 .cross{
@@ -60,10 +37,6 @@ h1 {
   font-family: 'Montserrat';
   font-size: 3.5rem;
   line-height: 1.5;
-}
-
-h5{
-  margin: 25px;
 }
 
 #title{
@@ -113,6 +86,16 @@ h3{
 }
 
 
+.about{
+  text-align: left;
+  line-height: 2;
+}
+
+.robot-img{
+  width: 25%;
+  float: left;
+  padding-right: 30px;
+}
 
 p{
   padding-top: 30px;
@@ -158,10 +141,8 @@ select{
   background-color: black;
   color: #fff;
   font-style: normal;
+  position: absolute;
+  bottom: 0px;
   width: 100%;
-  position: relative;
-  left: 0;
-  bottom: 0;
-  margin-top: 40px;
 
 }
