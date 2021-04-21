@@ -9,7 +9,7 @@
   "author": "Aditya Kr. Gupta E19CSE328",
   "license": "ISC",
   "engines": {
-    "node": "14.15.1"
+    "node": "15.12.0"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -25,6 +25,7 @@
     "nodemailer": "^6.4.17"
   },
   "devDependencies": {
+    "cypress": "^7.1.0",
     "nodemon": "^2.0.7"
   }
 }

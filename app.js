@@ -362,11 +362,8 @@ app.get("/", function(req,res){
 
 
   Event.find({}, function(err, foundEvent){
-    console.log(foundEvent);
     Project.find({}, function(errr, foundProject){
-      console.log(foundProject);
       Member.find({}, function(errrr, foundMember){
-        // var memberCount = foundMember.length
         res.render("home", {events: foundEvent, projects: foundProject, members: foundMember});
       });
 
@@ -381,7 +378,7 @@ app.post("/", function(req,res){
 
   var mailOptions = {
     from:req.body.cemail,
-    to:'robotics@bennett.edu.in',
+    to:'adityakrgupta938@gmail.com',
     subject:req.body.csubject,
     text:req.body.cmessage
   };
@@ -389,8 +386,10 @@ app.post("/", function(req,res){
   transporter.sendMail(mailOptions, function(err,info){
     if (!err){
       console.log("We will get in touch with you shortly !");
+      console.log(info);
       res.redirect("/");
     }else{
+      console.log(err);
       console.log("Seems something is broken :(");
     }
   })

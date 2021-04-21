@@ -51,15 +51,11 @@
           <img src="images/clubLogo.jfif" alt="Technotix logo" class="title-img">
         </div>
       </div>
-
-    </div>
-
-      </div>
     </section>
 
     <section id="about" class="about">
       <div class="container-fluid tit">
-        <div>
+        <div class='sec-title'>
           <h3>About</h3>
           <div class="about-row">
             <img class="robot-img" src="\images\robot.png" alt="robot image technotix club">
@@ -79,184 +75,175 @@ The club's intent is to inspire young minds to be the driving force in the field
 
     <section id="event" class="events">
       <div class="container-fluid tit">
-        <div>
+        <div class="sec-title">
           <h3>Events</h3>
         </div>
-
         <section class="pt-5 pb-5">
-<div class="container">
-  <div class="row">
-      <div class="col-6">
-          <!-- <h3 class="mb-3 tit"> Our Team </h3> -->
-      </div>
-      <div class="col-6 text-right">
-          <a class="btn btn-primary mb-3 mr-1" href="#carouselExampleIndicators2" role="button" data-slide="prev">
-              <i class="fa fa-arrow-left"></i>
-          </a>
-          <a class="btn btn-primary mb-3 " href="#carouselExampleIndicators2" role="button" data-slide="next">
-              <i class="fa fa-arrow-right"></i>
-          </a>
-      </div>
-      <div class="col-12">
-          <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
-
-              <div class="carousel-inner">
-                  <div class="carousel-item active">
-                      <div class="row">
-
-                        <% for(var i = 1;i<=events.length;i++){ %>
-
-                          <% if (i%3 === 0){ %>
-                            <div class="col-md-4 mb-3">
-                                <div class="card">
-                                    <img class="img-fluid" alt="100%x280" src="/image/<%= events[i-1].image %> ">
-                                    <div class="card-body">
-                                        <h4 class="card-title"> <%= events[i-1].eventName %> </h4>
-                                    </div>
-
-                                    <div class="card-footer">
-                                      <small class="text-muted"><a href="/specificEvent/<%= events[i-1].eventName %>">Details</a></small>
-                                    </div>
-
-                                </div>
-                            </div></div></div>
-                          <%  if (i !== events.length){ %>
-                              <div class="carousel-item">
-                                  <div class="row">
-                            <% } %>
-
-                          <% }else{ %>
-                            <div class="col-md-4 mb-3">
-                                <div class="card">
-                                    <img class="img-fluid" alt="100%x280" src="/image/<%= events[i-1].image %> ">
-                                    <div class="card-body">
-                                        <h4 class="card-title"> <%=  events[i-1].eventName %> </h4>
-
-
-                                    </div>
-                                    <div class="card-footer">
-                                      <small class="text-muted"><a href="/specificEvent/<%= events[i-1].eventName %>">Details</a></small>
-                                    </div>
-
+          <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <!-- <h3 class="mb-3 tit"> Our Team </h3> -->
+                </div>
+                <div class="col-6 text-right">
+                    <a class="btn btn-primary mb-3 mr-1" href="#carouselExampleIndicators2" role="button" data-slide="prev">
+                        <i class="fa fa-arrow-left"></i>
+                    </a>
+                    <a class="btn btn-primary mb-3 " href="#carouselExampleIndicators2" role="button" data-slide="next">
+                        <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="col-12">
+                    <div id="carouselExampleIndicators2" class="carousel slide" data-interval="false">
+          
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row">
+          
+                                  <% for(var i = 1;i<=events.length;i++){ %>
+          
+                                    <% if (i%3 === 0){ %>
+                                      <div class="col-md-4 mb-3">
+                                          <div class="card">
+                                              <img class="img-fluid" alt="100%x280" src="/image/<%= events[i-1].image %> ">
+                                              <div class="card-body">
+                                                  <h4 class="card-title"> <%= events[i-1].eventName %> </h4>
+                                              </div>
+          
+                                              <div class="card-footer">
+                                                <small class="text-muted"><a href="/specificEvent/<%= events[i-1].eventName %>">Details</a></small>
+                                              </div>
+          
+                                          </div>
+                                      </div></div></div>
+                                    <%  if (i !== events.length){ %>
+                                        <div class="carousel-item">
+                                            <div class="row">
+                                      <% } %>
+          
+                                    <% }else{ %>
+                                      <div class="col-md-4 mb-3">
+                                          <div class="card">
+                                              <img class="img-fluid" alt="100%x280" src="/image/<%= events[i-1].image %> ">
+                                              <div class="card-body">
+                                                  <h4 class="card-title"> <%=  events[i-1].eventName %> </h4>
+          
+          
+                                              </div>
+                                              <div class="card-footer">
+                                                <small class="text-muted"><a href="/specificEvent/<%= events[i-1].eventName %>">Details</a></small>
+                                              </div>
+          
+                                          </div>
+                                      </div>
+                                    <% } %>
+          
+          
+                                  <% } %>
+          
+          
                                 </div>
                             </div>
-                          <% } %>
-
-
-                        <% } %>
-
-
-                      </div>
-                  </div>
-              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
           </div>
+        </section>
       </div>
-  </div>
-</div>
-</section>
-
-
-
-      </div>
-
-
-      <hr>
-      <br>
+      <hr><br>
     </section>
 
 
     <section id="project"class="projects">
-
       <div class="container-fluid tit">
-        <div>
+        <div class="sec-title">
           <h3>Projects</h3>
         </div>
 
         <section class="pt-5 pb-5">
-<div class="container">
-  <div class="row">
-      <div class="col-6">
-          <!-- <h3 class="mb-3 tit"> Our Team </h3> -->
-      </div>
-      <div class="col-6 text-right">
-          <a class="btn btn-primary mb-3 mr-1" href="#carouselExampleIndicators3" role="button" data-slide="prev">
-              <i class="fa fa-arrow-left"></i>
-          </a>
-          <a class="btn btn-primary mb-3 " href="#carouselExampleIndicators3" role="button" data-slide="next">
-              <i class="fa fa-arrow-right"></i>
-          </a>
-      </div>
-      <div class="col-12">
-          <div id="carouselExampleIndicators3" class="carousel slide" data-ride="carousel">
-
-              <div class="carousel-inner">
-                  <div class="carousel-item active">
-                      <div class="row">
-
-                        <% for(var i = 1;i<=projects.length;i++){ %>
-
-                          <% if (i%3 === 0){ %>
-                            <div class="col-md-4 mb-3">
-                                <div class="card">
-                                    <img class="img-fluid" alt="100%x280" src="/image/<%= projects[i-1].image %> ">
-                                    <div class="card-body">
-                                        <h4 class="card-title"> <%= projects[i-1].projectName %> </h4>
+          <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <!-- <h3 class="mb-3 tit"> Our Team </h3> -->
+                </div>
+                <div class="col-6 text-right">
+                    <a class="btn btn-primary mb-3 mr-1" href="#carouselExampleIndicators3" role="button" data-slide="prev">
+                        <i class="fa fa-arrow-left"></i>
+                    </a>
+                    <a class="btn btn-primary mb-3 " href="#carouselExampleIndicators3" role="button" data-slide="next">
+                        <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="col-12">
+                    <div id="carouselExampleIndicators3" class="carousel slide" data-interval="false">
+          
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row">
+          
+                                  <% for(var i = 1;i<=projects.length;i++){ %>
+          
+                                    <% if (i%3 === 0){ %>
+                                      <div class="col-md-4 mb-3">
+                                          <div class="card">
+                                              <img class="img-fluid" alt="100%x280" src="/image/<%= projects[i-1].image %> ">
+                                              <div class="card-body">
+                                                  <h4 class="card-title"> <%= projects[i-1].projectName %> </h4>
+                                              </div>
+          
+                                              <div class="card-footer">
+                                                <small class="text-muted"><a href="/specificProject/<%= projects[i-1].projectName %>">Details</a></small>
+                                              </div>
+          
+                                          </div>
+                                      </div>
                                     </div>
-
-                                    <div class="card-footer">
-                                      <small class="text-muted"><a href="/specificProject/<%= projects[i-1].projectName %>">Details</a></small>
-                                    </div>
-
-                                </div>
-                            </div></div></div>
-                          <%  if (i !== projects.length){ %>
-                              <div class="carousel-item">
-                                  <div class="row">
-                            <% } %>
-
-                          <% }else{ %>
-                            <div class="col-md-4 mb-3">
-                                <div class="card">
-                                    <img class="img-fluid" alt="100%x280" src="/image/<%= projects[i-1].image %> ">
-                                    <div class="card-body">
-                                        <h4 class="card-title"> <%= projects[i-1].projectName %> </h4>
-
-
-                                    </div>
-                                    <div class="card-footer">
-                                      <small class="text-muted"><a href="/specificProject/<%= projects[i-1].projectName %>">Details</a></small>
-                                    </div>
-
+                                  </div>
+                                    <%  if (i !== projects.length){ %>
+                                        <div class="carousel-item">
+                                            <div class="row">
+                                      <% } %>
+          
+                                    <% }else{ %>
+                                      <div class="col-md-4 mb-3">
+                                          <div class="card">
+                                              <img class="img-fluid" alt="100%x280" src="/image/<%= projects[i-1].image %> ">
+                                              <div class="card-body">
+                                                  <h4 class="card-title"> <%= projects[i-1].projectName %> </h4>
+          
+          
+                                              </div>
+                                              <div class="card-footer">
+                                                <small class="text-muted"><a href="/specificProject/<%= projects[i-1].projectName %>">Details</a></small>
+                                              </div>
+          
+                                          </div>
+                                      </div>
+                                    <% } %>
+          
+          
+                                  <% } %>
+          
+          
                                 </div>
                             </div>
-                          <% } %>
-
-
-                        <% } %>
-
-
-                      </div>
-                  </div>
-              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
           </div>
+        </section>
       </div>
-  </div>
-</div>
-</section>
-
-
-
-      </div>
-
-    </section>
-
     <br>
     <hr>
+    </section>
+
+    
 
 
     <section id="team" class="team">
       <div class="container-fluid tit">
-        <div>
+        <div class="sec-title">
           <h3>Our Team</h3>
         </div>
 
@@ -297,74 +284,72 @@ The club's intent is to inspire young minds to be the driving force in the field
       <br>
       <hr>
       <br><br>
+    </section>
 
 
 
 
     <section id="contact" class="contact tit">
-
-
-<div class="container">
-  <h3 class="tit">Contact</h3>
-    <div class="row">
-        <div class="col-md-12">
-            <div class="well well-sm">
-                <form action="/" method="post">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="cname">
-                                Name</label>
-                            <input type="text" name="cname" class="form-control" id="name" placeholder="Enter name" required="required" />
-                        </div>
-                        <div class="form-group">
-                            <label for="cemail">
-                                Email Address</label>
-                            <div class="input-group">
-                                <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
-                                </span>
-                                <input type="email" name="cemail" class="form-control" id="email" placeholder="Enter email" required="required" /></div>
-                        </div>
-                        <div class="form-group">
-                            <label for="csubject">
-                                Subject</label>
-                            <select id="subject" name="csubject" class="form-control" required="required">
-                                <option value="na" selected="">Choose One:</option>
-                                <option value="collabration">Collabrate with technotix</option>
-                                <option value="suggestions">Suggestions</option>
-                                <option value="product">Genral query</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="cmessage">
-                                Message</label>
-                            <textarea name="cmessage" id="message" class="form-control" rows="9" cols="25" required="required"
-                                placeholder="Message"></textarea>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <button type="submit" class="btn btn-primary btn-outline-dark" id="btnContactUs">
-                            Send Message</button>
-                    </div>
-                </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-
-<br>
-<br>
-
+      <div class="container">
+        <h3 class="tit">Contact</h3>
+          <div class="row">
+              <div class="col-md-12">
+                  <div class="well well-sm">
+                      <form action="/" method="post">
+                      <div class="row">
+                          <div class="col-md-6">
+                              <div class="form-group">
+                                  <label for="cname">
+                                      Name</label>
+                                  <input type="text" name="cname" class="form-control" id="name" placeholder="Enter name" required="required" />
+                              </div>
+                              <div class="form-group">
+                                  <label for="cemail">
+                                      Email Address</label>
+                                  <div class="input-group">
+                                      <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
+                                      </span>
+                                      <input type="email" name="cemail" class="form-control" id="email" placeholder="Enter email" required="required" /></div>
+                              </div>
+                              <div class="form-group">
+                                  <label for="csubject">
+                                      Subject</label>
+                                  <select id="subject" name="csubject" class="form-control" required="required">
+                                      <option value="na" selected="">Choose One:</option>
+                                      <option value="collabration">Collabrate with technotix</option>
+                                      <option value="suggestions">Suggestions</option>
+                                      <option value="product">Genral query</option>
+                                  </select>
+                              </div>
+                          </div>
+                          <div class="col-md-6">
+                              <div class="form-group">
+                                  <label for="cmessage">
+                                      Message</label>
+                                  <textarea name="cmessage" id="message" class="form-control" rows="9" cols="25" required="required"
+                                      placeholder="Message"></textarea>
+                              </div>
+                          </div>
+                          <div class="col-md-12">
+                              <button type="submit" class="btn btn-primary btn-outline-dark" id="btnContactUs">
+                                  Send Message</button>
+                          </div>
+                      </div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+      
+      <br>
+      <br>
     </section>
 
 
 
 
 
-<footer class="footer-distributed foo">
+    <footer class="footer-distributed foo">
 
 			<div class="footer-left">
 
@@ -441,7 +426,7 @@ The club's intent is to inspire young minds to be the driving force in the field
 
       </div>
     </div>
-    </section>
+    
 
 
 
@@ -464,7 +449,7 @@ The club's intent is to inspire young minds to be the driving force in the field
           $(".navbar a").on('click' , function(){
             $("html, body").animate({
               scrollTop: $($.attr(this, 'herf')).offset().top
-            }, 'slow');
+            }, '1000');
           });
         });
       });
